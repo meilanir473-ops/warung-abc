@@ -1,12 +1,13 @@
 <?php
 
-$host ='localhost';
-$user = 'root';
+$host     = 'localhost';
+$user     = 'root';
 $password = '';
-$database ='db_warung_abc';
+$database = 'db_warung_abc';
 
-$koneksi= mysql_connect($host ='localhost';$user,$password,$database);
-if (!$koneksi){
-    die('koneksi database gagal:'.mysql_connect_error());
+$koneksi = mysqli_connect($host, $user, $password, $database);
+
+if (!$koneksi) {
+    die('Koneksi database gagal: ' . mysqli_connect_error());
 }
 ?>
