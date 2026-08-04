@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Jul 2026 pada 07.23
+-- Waktu pembuatan: 31 Jul 2026 pada 06.24
 -- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.0.30
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `warung_abc`
+-- Database: `db_warung_abc`
 --
 
 -- --------------------------------------------------------
@@ -31,9 +31,9 @@ CREATE TABLE `tbl_barang` (
   `id_barang` int(11) NOT NULL,
   `kode_barang` varchar(20) NOT NULL,
   `nama_barang` varchar(100) NOT NULL,
-  `harga_satuan` decimal(12,2) NOT NULL,
+  `harga_satuan` decimal(12,0) NOT NULL,
   `stok` int(11) NOT NULL,
-  `tanggal_kadaluarsa` date NOT NULL
+  `tanggal_kadaluarsa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -87,7 +87,7 @@ CREATE TABLE `tbl_transaksi` (
   `no_transaksi` varchar(30) NOT NULL,
   `tanggal` datetime NOT NULL,
   `id_kasir` int(11) NOT NULL,
-  `id_pelanggan` int(11) NOT NULL,
+  `id_pelanggan` int(11) DEFAULT NULL,
   `total_bayar` decimal(12,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -110,36 +110,6 @@ CREATE TABLE `tbl_user` (
 --
 
 --
--- Indeks untuk tabel `tbl_barang`
---
-ALTER TABLE `tbl_barang`
-  ADD PRIMARY KEY (`id_barang`);
-
---
--- Indeks untuk tabel `tbl_detail_transaksi`
---
-ALTER TABLE `tbl_detail_transaksi`
-  ADD PRIMARY KEY (`id_detail`);
-
---
--- Indeks untuk tabel `tbl_log`
---
-ALTER TABLE `tbl_log`
-  ADD PRIMARY KEY (`id_log`);
-
---
--- Indeks untuk tabel `tbl_pelanggan`
---
-ALTER TABLE `tbl_pelanggan`
-  ADD PRIMARY KEY (`id_pelanggan`);
-
---
--- Indeks untuk tabel `tbl_transaksi`
---
-ALTER TABLE `tbl_transaksi`
-  ADD PRIMARY KEY (`id_transaksi`);
-
---
 -- Indeks untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
@@ -148,36 +118,6 @@ ALTER TABLE `tbl_user`
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
-
---
--- AUTO_INCREMENT untuk tabel `tbl_barang`
---
-ALTER TABLE `tbl_barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT untuk tabel `tbl_detail_transaksi`
---
-ALTER TABLE `tbl_detail_transaksi`
-  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT untuk tabel `tbl_log`
---
-ALTER TABLE `tbl_log`
-  MODIFY `id_log` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT untuk tabel `tbl_pelanggan`
---
-ALTER TABLE `tbl_pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT untuk tabel `tbl_transaksi`
---
-ALTER TABLE `tbl_transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_user`
