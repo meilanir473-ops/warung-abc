@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 include 'config/koneksi.php';
 
@@ -13,13 +12,13 @@ if (mysqli_num_rows($hasil) == 1) {
     $data = mysqli_fetch_assoc($hasil);
 
     if (password_verify($password, $data['password'])) {
-        
+        // Password cocok, buat session
         $_SESSION['login']       = true;
         $_SESSION['id_user']     = $data['id_user'];
         $_SESSION['nama_lengkap']= $data['nama_lengkap'];
         $_SESSION['role']        = $data['role'];
 
-        
+        // Catat aktivitas ke tbl_log
         $id_user = $data['id_user'];
         $waktu   = date('Y-m-d H:i:s');
         $log     = "INSERT INTO tbl_log (id_user, aktivitas, waktu)";
@@ -29,7 +28,7 @@ if (mysqli_num_rows($hasil) == 1) {
         header('Location: dashboard.php');
         exit;
     } else {
-        $_SESSION ['pesan_error'] = 'Password salah!';
+        $_SESSION['pesan_error'] = 'Password salah!';
         header('Location: login.php');
         exit;
     }

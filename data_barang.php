@@ -1,5 +1,6 @@
-<?php
 
+
+<?php
 include 'includes/cek_session.php';
 include 'config/koneksi.php';
 
@@ -15,7 +16,7 @@ $hasil = mysqli_query($koneksi, $sql);
     <table border="1" cellpadding="6">
         <tr>
             <th>Kode</th><th>Nama Barang</th><th>Harga Satuan</th>
-            <th>stok</th><th>Kadaluarsa</th><th>Aksi</th>
+            <th>Stok</th><th>Kadaluarsa</th><th>Aksi</th>
         </tr>
         <?php while ($row = mysqli_fetch_assoc($hasil)) { ?>
         <tr>
