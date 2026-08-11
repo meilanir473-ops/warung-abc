@@ -11,7 +11,9 @@ $hasil = mysqli_query($koneksi, $sql);
 ?>
 <!DOCTYPE html>
 <html>
-<head><title>Riwayat Transaksi - Warung ABC</title></head>
+<head>
+<link rel="stylesheet" href="style.css">    
+<title>Riwayat Transaksi - Warung ABC</title></head>
 <body>
     <h1>Riwayat Transaksi</h1>
     <table border="1" cellpadding="6">
