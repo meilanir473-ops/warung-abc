@@ -1,5 +1,3 @@
-
-
 <?php
 include 'includes/cek_session.php';
 include 'config/koneksi.php';
@@ -10,8 +8,9 @@ $hasil = mysqli_query($koneksi, $sql);
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">  
-    <title>Data Barang - Warung ABC</title></head>
+    <link rel="stylesheet" href="style.css">
+    <title>Data Barang - Warung ABC</title>
+</head>
 <body>
     <h1>Data Barang</h1>
     <p><a href="dashboard.php">Kembali ke Dashboard</a> | <a href="tambah_barang.php">Tambah Barang</a></p>
