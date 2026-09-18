@@ -1,0 +1,39 @@
+/* style.css - Tema Biru, Putih, & Hitam Modern */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+body { background: #f4f7fa; color: #1e293b; padding: 25px; max-width: 950px; margin: 0 auto; line-height: 1.5; }
+
+/* Judul & Link */
+h1, h2, h3 { color: #0f172a; margin-bottom: 12px; }
+a { color: #2563eb; text-decoration: none; font-weight: 600; }
+a:hover { color: #1d4ed8; text-decoration: underline; }
+
+/* Dashboard Cards Layout */
+.card-container { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+.card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; flex: 1 1 200px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05); text-align: center; }
+.card h3 { color: #1e293b; margin-bottom: 6px; font-size: 16px; }
+.card p { font-size: 13px; color: #64748b; margin-bottom: 12px; }
+.card a { display: inline-block; background: #eff6ff; color: #2563eb; padding: 7px 16px; border-radius: 6px; border: 1px solid #bfdbfe; font-size: 13px; font-weight: 600; }
+.card a:hover { background: #2563eb; color: #ffffff; text-decoration: none; }
+
+/* Form & Input */
+form { background: #ffffff; padding: 22px; border-radius: 10px; border: 1px solid #e2e8f0; max-width: 480px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05); margin-bottom: 20px; }
+input[type="text"], input[type="password"], input[type="number"], input[type="date"], input[type="month"], select {
+    width: 100%; padding: 9px 12px; margin: 6px 0 14px; border: 1px solid #cbd5e1; border-radius: 6px; background: #f8fafc; outline: none;
+}
+input:focus, select:focus { border-color: #2563eb; background: #ffffff; box-shadow: 0 0 5px rgba(37, 99, 235, 0.25); }
+
+/* Tombol Biru Modern */
+input[type="submit"], button {
+    background: #2563eb; color: #ffffff; border: none; padding: 10px 18px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.2s;
+}
+input[type="submit"]:hover, button:hover { background: #1d4ed8; }
+
+/* Tabel Data Header Hitam/Navy */
+table { width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.03); margin-bottom: 20px; }
+th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #f1f5f9; }
+th { background: #0f172a; color: #ffffff; font-weight: 600; }
+tr:hover { background: #f8fafc; }
+
+/* Pesan Error & Cetak Struk */
+p[style*="color:red;"] { background: #fef2f2; color: #991b1b !important; padding: 10px 14px; border-radius: 6px; border: 1px solid #fecaca; margin-bottom: 15px; }
+@media print { button, a { display: none !important; } table { border: 1px solid #000; } }
