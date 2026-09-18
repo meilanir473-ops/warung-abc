@@ -1,21 +1,22 @@
-<?php include 'includes/cek_session.php'; ?>
+<?php 
+// tambah_barang.php
+include 'includes/cek_session.php'; 
+?>
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
     <title>Tambah Barang - Warung ABC</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Tambah Barang</h1>
+    <h2>Tambah Barang</h2>
     <form action="proses_tambah_barang.php" method="POST">
-        <table>
-            <tr><td>Kode Barang</td><td>:</td><td><input type="text" name="kode_barang" required></td></tr>
-            <tr><td>Nama Barang</td><td>:</td><td><input type="text" name="nama_barang" required></td></tr>
-            <tr><td>Harga Satuan</td><td>:</td><td><input type="number" name="harga_satuan" step="0.01" required></td></tr>
-            <tr><td>Stok</td><td>:</td><td><input type="number" name="stok" required></td></tr>
-            <tr><td>Tanggal Kadaluarsa</td><td>:</td><td><input type="date" name="tanggal_kadaluarsa"></td></tr>
-            <tr><td colspan="3"><input type="submit" value="Simpan"></td></tr>
-        </table>
+        Kode Barang: <input type="text" name="kode_barang" required>
+        Nama Barang: <input type="text" name="nama_barang" required>
+        Harga Satuan: <input type="number" name="harga_satuan" step="0.01" required>
+        Stok: <input type="number" name="stok" required>
+        Tanggal Kadaluarsa: <input type="date" name="tanggal_kadaluarsa">
+        <input type="submit" value="Simpan">
     </form>
     <p><a href="data_barang.php">Kembali</a></p>
 </body>
